@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Hello World</title>
+    <script src="./script/react.js"></script>
+    <script src="./script/react-dom.js"></script>
+</head>
+
+<body>
+<div id="root" class="root"></div>
+<script>
+    // 通过dom向页面中添加一个div
+    // 创建一个div
+    // const div = document.createElement('div')
+    // div.innerHTML = '我是一个div';
+    // const root = document.getElementById('root')
+    // root.appendChild(div)
+
+    const div = React.createElement("div", {id: "hello"}, "我是react元素");
+
+    const root = ReactDOM.createRoot(document.getElementById('root'))
+
+    root.render(div)
+
+</script>
+</body>
+
+</html>
