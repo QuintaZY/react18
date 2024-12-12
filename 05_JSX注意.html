@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./script/react.js"></script>
+    <script src="./script/react-dom.js"></script>
+    <script src="./script/babel.min.js"></script>
+</head>
+<style>
+    class-1 {
+        color: #ff0000;
+    }
+</style>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+    /**
+     *  1, jsx不是字符串，不要加引号
+     *  */
+        // 申明式编程
+    const name = '张三';
+    const div = <div id="divbox" onClick={() => {
+        console.log('div被点击了');
+    }} className="class1" style={{ background: '#cccccc' }}>
+        <ul>
+            <li>3</li>
+
+            <li>4</li>
+        </ul>
+        <label>
+            <input type="text"/>
+        </label>
+        <div>{name}</div>
+    </div>
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(div);
+</script>
+</body>
+</html>
