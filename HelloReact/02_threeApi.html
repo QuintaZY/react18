@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三个API</title>
+    <script src="./script/react.js"></script>
+    <script src="./script/react-dom.js"></script>
+</head>
+<body>
+<div id="root" class="root"></div>
+
+
+<script>
+    /**
+     * 1，
+     * 2，react中的元素创建完之后就无法再修改，只能通过创建新的元素替换
+     */
+    const button = React.createElement('button', {
+        type: 'button',
+        className: 'hello-class',
+        onClick: () => {
+            alert(123)
+        }
+    }, '点我')
+    // 创建一个div
+    const div = React.createElement('div', {}, button)
+    const root = ReactDOM.createRoot(document.getElementById('root'))
+    root.render(div)
+
+    // 修改按钮文字
+    const btn = document.getElementById('btn')
+    btn.addEventListener('click', () => {
+        // 点击按钮之后，修改按钮的文字
+        const button = React.createElement('button', {
+            className: 'hello-class',
+            onClick: () => {
+                alert('点我')
+            }
+        }, 'click me');
+
+        // 创建一个div
+        const div = React.createElement('div', {}, '我是一个div', button)
+        root.render(div)
+
+    })
+
+</script>
+</body>
+</html>

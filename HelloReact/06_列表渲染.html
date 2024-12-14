@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./script/react.js"></script>
+    <script src="./script/react-dom.js"></script>
+    <script src="./script/babel.min.js"></script>
+</head>
+<style>
+    class-1 {
+        color: #ff0000;
+    }
+</style>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+    // const name = '张三';
+    // const lang = 'en';
+    // let div;
+    // if (lang === 'en') {
+    //     div = <div>Hello {name}</div>
+    // } else if (lang === 'zh') {
+    //     div = <div>你好 {name}</div>
+    // }
+
+    const arr = ['张三', '李四', '王五'];
+    const list = <ul>{
+        arr.map((item, index) => <li key={index}>{item}</li>)
+    }</ul>
+
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(list);
+</script>
+</body>
+</html>

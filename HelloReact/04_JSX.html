@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./script/react.js"></script>
+    <script src="./script/react-dom.js"></script>
+    <script src="./script/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+    // 申明式编程
+    const button = <button>按钮</button>;  // JSX   需要babel转译
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(button);
+</script>
+</body>
+</html>
