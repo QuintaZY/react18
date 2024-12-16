@@ -1,0 +1,42 @@
+
+.item {
+    display: flex;
+    /*align-items: center;*/
+    background-color: #fcbf49;
+    border-radius: 10px;
+}
+.item:not(:last-child) {
+    margin-bottom: 10px;
+}
+.content {
+    flex: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.desc {
+    font-size: 16px;
+    color: #194B49;
+}
+.time {
+    color: #d62828;
+}
+.delete {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background-color: #d62828;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.delete:hover {
+    background-color: #f77f00;
+    transform: rotate(180deg);
+}

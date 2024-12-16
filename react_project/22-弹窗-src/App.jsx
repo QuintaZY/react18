@@ -4,7 +4,6 @@ import Card from "./components/UI/Card/Card.jsx";
 import LogsForm from "./components/LogsForm/LogsForm.jsx";
 import './App.css'
 import ConfirmModal from "./components/UI/ConfirmModal/ConfirmModal.jsx";
-import BackDrop from "./components/UI/BackDrop/BackDrop.jsx";
 
 const App = () => {
     const [logsData, setLogsData] = useState([
@@ -22,7 +21,7 @@ const App = () => {
     }
     return (
         <div className="app">
-            {/*<ConfirmModal/>*/}
+            <ConfirmModal/>
             <LogsForm onSaveLog={onSaveLogHandler}/>
             <Logs logsData={logsData} onDelLog={onDeleteLogHandler} />
         </div>

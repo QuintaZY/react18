@@ -1,0 +1,32 @@
+.confirm-modal {
+    width: 350px;
+    height: 190px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right:0;
+    bottom: 0;
+    margin: auto;
+}
+.confirm-text {
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #333;
+}
+.confirm-btn-group {
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.confirm-btn {
+    height: 30px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
