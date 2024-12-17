@@ -1,11 +1,11 @@
 import React from 'react';
 import './ConfirmModal.css'
 import Card from "../Card/Card.jsx";
-import Backdrop from "../BackDrop/BackDrop.jsx";
+import BackDrop from "../BackDrop/BackDrop.jsx";
 
 const ConfirmModal = (props) => {
     return (
-        <Backdrop>
+        <BackDrop>
             <Card className={'confirm-modal'}>
                 <div className={'confirm-text'}>
                     <p>{props.confirmText}</p>
@@ -15,7 +15,7 @@ const ConfirmModal = (props) => {
                     <button onClick={props.onConfirm} className={'confirm-btn'}>确定</button>
                 </div>
             </Card>
-        </Backdrop>
+        </BackDrop>
     );
 };
 

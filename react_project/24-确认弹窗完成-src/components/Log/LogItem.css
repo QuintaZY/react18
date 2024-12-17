@@ -4,8 +4,6 @@
     /*align-items: center;*/
     background-color: #fcbf49;
     border-radius: 10px;
-    position: relative;
-
 }
 .item:not(:last-child) {
     margin-bottom: 10px;
