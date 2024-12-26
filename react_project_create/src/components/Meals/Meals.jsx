@@ -1,0 +1,16 @@
+import React from 'react';
+import Meal from "./Meal/Meal.jsx";
+import classes from './Meals.module.css';
+const Meals = () => {
+    return (
+        <div className={classes.Meals}>
+            <Meal />
+            <Meal />
+            <Meal />
+            <Meal />
+            <Meal />
+        </div>
+    );
+};
+
+export default Meals;

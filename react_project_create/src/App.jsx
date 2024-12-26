@@ -1,12 +1,14 @@
-import {useState} from 'react'
+import {Fragment, useState} from 'react'
+import Meals from "./components/Meals/Meals.jsx";
 
-function App() {
-    const [count, setCount] = useState(0)
+
+const App = () => {
+
 
     return (
-        <>
-            1
-        </>
+        <div>
+            <Meals></Meals>
+        </div>
     )
 }
 
