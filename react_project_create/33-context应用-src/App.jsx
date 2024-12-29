@@ -1,7 +1,6 @@
 import {Fragment, useState} from 'react'
 import Meals from "./components/Meals/Meals.jsx";
 import CartContext from "./store/cart-context.js";
-import FilterMeals from "./components/FilterMeals/FilterMeals.jsx";
 
 const MEALS_DATA = [{
     id: '1', title: '芝士汉堡', desc: '100% 牛肉饼配上融化的芝士和新鲜蔬菜。', price: 12, img: '/img/meals/1.png'
@@ -20,12 +19,6 @@ const App = () => {
     const [cartData, setCartData] = useState({
         items: [], totalAmount: 0, totalPrice: 0
     });
-    // 创建一个过滤meals的函数
-    const filterHandler = (type) => {
-        const result = MEALS_DATA.filter(meal => meal.title.includes(type));
-        setMeals(result);
-    }
-
     // 向购物车添加商品
     const addItem = (meal) => {
         // meal 要添加的商品
@@ -63,8 +56,7 @@ const App = () => {
     }
     return (<div>
         <CartContext.Provider value={{...cartData, addItem, removeItem}}>
-            <FilterMeals onFilter={filterHandler}></FilterMeals>
-            <Meals mealsData={meals}></Meals>
+            <Meals mealsData={meals} ></Meals>
         </CartContext.Provider>
     </div>)
 }

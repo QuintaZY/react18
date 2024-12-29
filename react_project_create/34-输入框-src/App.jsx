@@ -20,12 +20,6 @@ const App = () => {
     const [cartData, setCartData] = useState({
         items: [], totalAmount: 0, totalPrice: 0
     });
-    // 创建一个过滤meals的函数
-    const filterHandler = (type) => {
-        const result = MEALS_DATA.filter(meal => meal.title.includes(type));
-        setMeals(result);
-    }
-
     // 向购物车添加商品
     const addItem = (meal) => {
         // meal 要添加的商品
@@ -63,7 +57,7 @@ const App = () => {
     }
     return (<div>
         <CartContext.Provider value={{...cartData, addItem, removeItem}}>
-            <FilterMeals onFilter={filterHandler}></FilterMeals>
+            <FilterMeals></FilterMeals>
             <Meals mealsData={meals}></Meals>
         </CartContext.Provider>
     </div>)
