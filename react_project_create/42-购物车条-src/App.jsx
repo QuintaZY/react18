@@ -2,7 +2,6 @@ import {Fragment, useState} from 'react'
 import Meals from "./components/Meals/Meals.jsx";
 import CartContext from "./store/cart-context.js";
 import FilterMeals from "./components/FilterMeals/FilterMeals.jsx";
-import Backdrop from "./components/UI/Backdrop/Backdrop.jsx";
 
 const MEALS_DATA = [{
     id: '1', title: '芝士汉堡', desc: '100% 牛肉饼配上融化的芝士和新鲜蔬菜。', price: 12, img: '/img/meals/1.png'
@@ -66,7 +65,6 @@ const App = () => {
         <CartContext.Provider value={{...cartData, addItem, removeItem}}>
             <FilterMeals onFilter={filterHandler}></FilterMeals>
             <Meals mealsData={meals}></Meals>
-            <Backdrop />
         </CartContext.Provider>
     </div>)
 }
