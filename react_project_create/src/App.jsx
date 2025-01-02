@@ -2,7 +2,6 @@ import {Fragment, useState} from 'react'
 import Meals from "./components/Meals/Meals.jsx";
 import CartContext from "./store/cart-context.js";
 import FilterMeals from "./components/FilterMeals/FilterMeals.jsx";
-import Backdrop from "./components/UI/Backdrop/Backdrop.jsx";
 import Cart from "./components/Cart/Cart.jsx";
 
 const MEALS_DATA = [{
@@ -63,11 +62,19 @@ const App = () => {
         // 更新购物车
         setCartData(newCart);
     }
+    // 清除
+    const clearCart = () => {
+        const newCart = {...cartData};
+        newCart.item.forEach(item => delete item.amount)
+        newCart.totalAmount = 0
+        newCart.totalPrice = 0
+        setCartData(newCart)
+    }
     return (<div>
-        <CartContext.Provider value={{...cartData, addItem, removeItem}}>
+        <CartContext.Provider value={{...cartData, addItem, removeItem, clearCart}}>
             <FilterMeals onFilter={filterHandler}></FilterMeals>
             <Meals mealsData={meals}></Meals>
-            <Cart />
+            <Cart/>
             {/*<Backdrop />*/}
         </CartContext.Provider>
     </div>)
