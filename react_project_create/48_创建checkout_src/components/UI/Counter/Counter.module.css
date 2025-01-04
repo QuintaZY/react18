@@ -1,0 +1,30 @@
+.sub, .add {
+    /*cursor: pointer;*/
+    border: none;
+    width: 40rem;
+    height: 40rem;
+    /*line-height: 40rem;*/
+    border-radius: 50%;
+    font-size: 28rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.counter {
+    display: flex;
+    align-items: center;
+
+}
+.add {
+    background-color: orange;
+}
+.sub {
+    background-color: #fff;
+    border: 1px solid #000;
+}
+.count {
+    font-size: 40rem;
+    margin: 0 14rem;
+    min-width: 29px;
+    text-align: center;
+}

@@ -11,16 +11,6 @@ const Checkout = (props) => {
         <div className={classes.Close}>
             <FontAwesomeIcon onClick={() => props.onHide()} icon={faXmark}/>
         </div>
-        <header className={classes.header}>
-            <h2 className={classes.title}>餐品详情</h2>
-        </header>
-        <div>
-            列表
-        </div>
-        <footer>
-            底部
-        </footer>
-
     </div>, checkoutRoot);
 };
 
