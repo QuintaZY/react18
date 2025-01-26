@@ -1,11 +1,10 @@
 import React from 'react';
 
-const B = (props) => {
+const B = () => {
     console.log('b组件,重新渲染了')
     return (
         <div style={{fontSize: '50px'}}>
             b组件
-            <p>{props.test}</p>
         </div>
     );
 };
