@@ -1,6 +1,6 @@
 import {Fragment, useEffect, useReducer, useState} from 'react'
 import {useDispatch, useSelector} from "react-redux";
-import {changeName, changeAge, changeSchoolName, changeSchoolAddress} from "./store/index.js";
+import {changeName, changeAge} from "./store/index.js";
 
 const App = () => {
     const student = useSelector(state => state.student);
@@ -9,8 +9,7 @@ const App = () => {
     // 获取修改name的方法
 
     const handlerChangeName = () => {
-        // dispatch(changeName('章五'))
-        dispatch({type: 'stu/changeName', payload: '章五'})
+        dispatch(changeName('章五'))
     }
     const handlerChangeAge = () => {
         dispatch(changeAge(81))

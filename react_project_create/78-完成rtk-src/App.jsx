@@ -1,6 +1,6 @@
 import {Fragment, useEffect, useReducer, useState} from 'react'
 import {useDispatch, useSelector} from "react-redux";
-import {changeName, changeAge, changeSchoolName, changeSchoolAddress} from "./store/index.js";
+import {changeName, changeAge} from "./store/index.js";
 
 const App = () => {
     const student = useSelector(state => state.student);
