@@ -17,8 +17,32 @@ const studentApi = createApi({
                 query() {
                     // 用来指定请求子路径
                     return 'students';
+                },
+                // transformResponse 用来转换响应数据的格式
+                transformResponse(baseQueryReturnValue, meta, arg) {
+                    return baseQueryReturnValue.data;
                 }
             }),
+            getStudentById:build.query({
+                query(id) {
+                    //http://localhost:1337/api/students/23
+                    return `students/${id}`;
+                },
+                transformResponse(baseQueryReturnValue, meta, arg) {
+                    return baseQueryReturnValue.data;
+                }
+            }),
+
         };
     }// endpoints 用来指定Api中的各种功能，是一个方法，需要一个对象作为返回值
 });
+
+// Api对象创建后，对象中会根据各种方法自动的生成对应的钩子函数
+// 通过这些钩子函数，可以来向服务器发送请求
+// 钩子函数的命名规则 getStudents --> useGetStudentsQuery
+export const {
+    useGetStudentsQuery,
+    useGetStudentByIdQuery
+} = studentApi;
+
+export default studentApi;

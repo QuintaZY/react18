@@ -1,19 +1,21 @@
 import {Fragment, useEffect, useReducer, useState} from 'react'
 import {useDispatch, useSelector} from "react-redux";
+import {changeName, changeAge} from "./store/stuSlice.js";
+import {changeSchoolName, changeSchoolAddress} from "./store/schoolSlice.js";
 
 const App = () => {
-    // const student = useSelector(state => state.student);
+    const student = useSelector(state => state.student);
     // 通过dispatch获取派发器对象
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
     // 获取修改name的方法
 
-    // const handlerChangeName = () => {
-    //     // dispatch(changeName('章五'))
-    //     dispatch({type: 'stu/changeName', payload: '章五'})
-    // }
-    // const handlerChangeAge = () => {
-    //     dispatch(changeAge(81))
-    // }
+    const handlerChangeName = () => {
+        // dispatch(changeName('章五'))
+        dispatch({type: 'stu/changeName', payload: '章五'})
+    }
+    const handlerChangeAge = () => {
+        dispatch(changeAge(81))
+    }
 
     return (<div style={{fontSize: '20px'}}>
         <div>
